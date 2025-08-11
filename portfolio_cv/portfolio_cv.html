@@ -44,62 +44,50 @@
         }
 
         .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             background: white;
             color: black;
-            padding: 40px 0;
-            text-align: center;
+            padding: 30px 40px;
             position: relative;
+            gap: 30px;
             overflow: hidden;
+            border-bottom: 2px solid #18191a;
+             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateX(-50px) translateY(-50px);
-            }
-
-            100% {
-                transform: translateX(0px) translateY(0px);
-            }
-        }
-
+       
         .profile-img {
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.4);
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            font-weight: bold;
+            border: 5px solid rgba(23, 22, 22, 0.4);  
+            position: relative;
+            z-index: 2;
             color: white;
-            position: relative;
-            z-index: 2;
         }
 
-
+        .header-text {
+            padding: 0 20px;
+            text-align: center;
+            color: black;
+            flex-direction: column;
+            align-items: flex-end;
+            display: flex;
+        }
         .name {
-            font-size: 2.8em;
+            font-size: 2em;
             font-weight: bold;
-            margin-bottom: 10px;
+            padding-left: 40ox;         
             position: relative;
-            z-index: 2;
         }
-
+        .subtitle {
+            font-size: 1.2em;
+            color : black;
+            align-items: right;
+        }
 
         .main-content {
             padding: 40px;
@@ -321,13 +309,19 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="cv-section" class="container">
         <div class="header">
-            <div class="profile-img" style="background: none; padding: 0;">
+            <div class="profile-img" >
                 <img src="1695049131844.JPG" alt="Tareq Profile" style="width: 100%; height: 100%; border-radius: 50%;">
             </div>
-            <h1 class="name">Mehedi Hasan Tareq</h1>
-            <p class="section-title">Software Engineering Student | Competitive Programmer</p>
+            <div class="header-text">
+                <h1 class="name">Mehedi Hasan Tareq</h1>
+                <div class="subtitle">
+                    <p>Software Engineering Student</p>
+                    <p>Competitive Programmer</p>
+                    <p>Web Developer</p>
+                </div>   
+            </div>
         </div>
 
         <div class="main-content">
